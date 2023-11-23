@@ -128,9 +128,36 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 9. (d) Both b and c
 10. (b) No
 11. (c) MIT
-12. Sleeping : 
-    Running :
-    Zombie :
-    Unused :
+12. Running - the process is currently executing
+    Sleeping - the process is not running, waiting for an event
+    Zombie - the process has finished executing but still has an entry in the process table
+    Unused - the process table entry is empty/available
+    Runnable -
+    
 
-13. 
+13. Superblock - contains metadata like size and free blocks
+    Inode blocks - map file names to disk blocks
+    Data blocks - contain file data This simple structure allows basic file manipulation like creating, deleting, opening files.
+
+14. System calls provide the interface between user processes and the kernel. Examples are read, write, open, close. Library functions are part of the C standard library that applications can link to - printf, malloc, string functions.
+
+15. Paging in XV6 involves dividing physical memory into fixed-size blocks called pages. These pages are used to manage virtual memory, providing several benefits like efficient use of memory, easier memory allocation, and protection between different processes' memory spaces.
+
+16. ls: shows directory contents.
+    cd: Changes the current directory.
+    mkdir: make directories
+
+17. Process synchronization ensures predictable execution using primitives like locks and semaphores. This prevents race conditions. XV6 uses simple locking allowing only one process to enter critical sections.
+
+18. Interrupts trigger the processor to suspend current execution and run an interrupt handler. This allows implementing I/O device drivers and low-level functionality. XV6 handles interrupts via the intr() function and interrupt descriptor table.
+
+19. Virtual memory uses paging and swapping to give each process the illusion of a large, contiguous address space. It provides isolation between processes. XV6 does not implement virtual memory. All processes access the same physical memory.
+
+20.
+The boot steps are:
+Execute bootloader from ROM
+Load kernel image from disk to memory
+Set up interrupt descriptor table
+Call main() in kernel - initializes subsystems
+Create first process - init proc
+init proc exec's the user shell
