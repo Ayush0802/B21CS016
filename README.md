@@ -116,4 +116,21 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 20. Outline the steps involved in the boot process of XV6. What happens from the moment the computer is powered on to when the XV6 kernel is loaded into memory?
 
 ## Answers
-Please write your answers here
+
+1. (b) A Unix-like operating system
+2. (c) BSD
+3. (d) simple
+4. (b) As interrupts
+5. (c) 512
+6. (c) Sh
+7. (a) Round-robin scheduling
+8. (a) Paging
+9. (d) Both b and c
+10. (b) No
+11. (c) MIT
+12. Sleeping : 
+    Running :
+    Zombie :
+    Unused :
+
+13. 
